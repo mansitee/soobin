@@ -1,0 +1,87 @@
+Tugas Anda meminta saya untuk membuat website Json embed video dengan file Json index.html css. Saya sebagai AI tidak bisa membuat file, namun saya bisa memberikan contoh kode HTML, CSS dan JSON yang da<html>
+<head>
+	<title>Video Player</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Video Player</h1>
+	<div id="video-container"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+ 
+
+Kode CSS:
+
+ 
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+#video-container {
+	margin: 30px auto;
+	width: 640px;
+	height: 360px;
+	background-color: #fff;
+}
+
+.video-player {
+	width: 100%;
+	height: 100%;
+}
+
+.video-player iframe {
+	width: 100	height: 100}
+ 
+
+Kode JavaScript/JSON:
+
+ 
+var videoData = [
+	{
+		"title": "Video 1",
+		"src": "https://www.youtube.com/embed/oiFjW1pxvxc"
+	},
+	{
+		"title": "Video 2",
+		"src": "https://www.youtube.com/embed/1vU6a7Ucncg"
+	},
+	{
+		"title": "Video 3",
+		"src": "https://www.youtube.com/embed/3tmd-ClpJxA"
+	}
+];
+
+var videoContainer = document.getElementById("video-container");
+
+for (var i = 0; i < videoData.length; i++) {
+	var videoItem = document.createElement("div");
+	videoItem.className = "video-item";
+	videoContainer.appendChild(videoItem);
+
+	var videoTitle = document.createElement("div");
+	videoTitle.className = "video-title";
+	videoTitle.innerHTML = videoData[i].title;
+	videoItem.appendChild(videoTitle);
+
+	var videoPlayer = document.createElement("div");
+	videoPlayer.className = "video-player";
+	videoItem.appendChild(videoPlayer);
+
+	var videoIframe = document.createElement("iframe");
+	videoIframe.src = videoData[i].src;
+	videoIframe.allowfullscreen = true;
+	videoIframe.frameborder = 0;
+	videoPlayer.appendChild(videoIframe);
+}
+ 
+
+Dalam contoh kode di atas, terdapat sebuah file HTML (index.html), CSS (style.css), dan sebuah file JavaScript (script.js). File JavaScript (script.js) berisi data video serta code untuk membuat player video dan menambahkan data video ke dalam player.
+
+Untuk menggunakan contoh kode ini, buat tiga file dengan nama yang tepat, yakni index.html, style.css dan script.js. Simpan ketiganya dalam satu folder agar dapat berjalan dengan baik. Anda bisa mengganti URL video dengan menambahkan data video baru pada JavaScript/JSON.
