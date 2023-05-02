@@ -1,6 +1,6 @@
 var CACHE_NAME = 'MANsitee';
 var urlsToCache = [
-  'index.html'
+  'index.html', 'offline.html'
 ];
 
 self.addEventListener('install', function(event) {
