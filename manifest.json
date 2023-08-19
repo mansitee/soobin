@@ -38,13 +38,20 @@
     "personalization",
     "utilities"
   ],
+  "shortcuts": [
+    {
+      "name": "Mansitee",
+      "url": "https://mansitee.github.io/app",
+      "description": ""
+    }
+  ],
   "share_target": {
     "method": "GET",
     "params": {
       "title": "Mansiteee",
       "url": "https://mansitee.github.io/app"
     }
-  },
+  } ],
   "display_override": [
     "browser",
     "fullscreen",
